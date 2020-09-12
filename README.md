@@ -50,3 +50,10 @@ $ tree
 
 21 directories, 19 files
 ```
+
+## 参考
+
+- https://engineer.recruit-lifestyle.co.jp/techblog/2018-03-16-go-ddd/
+- https://eng-blog.iij.ad.jp/archives/2442
+
+
