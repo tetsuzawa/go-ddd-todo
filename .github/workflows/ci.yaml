@@ -44,6 +44,10 @@ jobs:
           mkdir -p $HOME/bin && curl -sfL $INSTALL_SHELL| sh -s -- -b $HOME/bin
           echo ::add-path::$HOME/bin
           echo ::add-path::$(go env GOPATH)/bin # for Go projects
+
+      - name: Install errcheck
+        run: go get -u github.com/kisielk/errcheck
+
       - name: Run reviewdog
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}

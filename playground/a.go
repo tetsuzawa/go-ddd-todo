@@ -6,7 +6,7 @@ import (
 )
 
 func a()  {
-	errors.New("aaa")
+	_ = errors.New("aaa")
 
 	fmt.Printf("aiueo %v")
 }
