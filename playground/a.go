@@ -10,3 +10,8 @@ func a()  {
 
 	fmt.Printf("aiueo %v")
 }
+
+func HalloWolrd()  {
+	const Namea = "tanaka"
+	println(Namea)
+}
