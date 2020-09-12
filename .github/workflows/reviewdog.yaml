@@ -11,7 +11,7 @@ jobs:
       - name: staticcheck
         uses: reviewdog/action-staticcheck@v1
         with:
-          level: warning
+          level: error
 
   golangci-lint:
     name: runner / golangci-lint
@@ -22,7 +22,7 @@ jobs:
       - name: golangci-lint
         uses: reviewdog/action-golangci-lint@v1
         with:
-          level: warning
+          level: error
 
   golint:
     name: runner / golint
@@ -35,7 +35,7 @@ jobs:
         with:
           golangci_lint_flags: "--disable-all -E golint"
           tool_name: golint
-          level: warning
+          level: error
 
   errcheck:
     name: runner / errcheck
@@ -48,4 +48,4 @@ jobs:
         with:
           golangci_lint_flags: "--disable-all -E errcheck"
           tool_name: errcheck
-          level: warning
+          level: error
