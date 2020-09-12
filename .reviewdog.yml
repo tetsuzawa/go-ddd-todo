@@ -6,4 +6,6 @@ runner:
     level: warning
   govet:
     cmd: go vet -all ./...
+  errcheck:
+    cmd: errcheck ./...
 
