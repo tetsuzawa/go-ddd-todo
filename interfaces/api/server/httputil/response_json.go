@@ -46,7 +46,9 @@ func isNil(p interface{}) bool {
 
 func RespondErrorJson(w http.ResponseWriter, code int, err error) {
 	log.Printf("code=%d, err=%s", code, err)
-	if e, ok := err.(*HTTPError); ok {
+	if code >= 500 {
+		RespondJSON(w, code, HTTPError{Message:http.StatusText(code)})
+	} else if e, ok := err.(*HTTPError); ok {
 		RespondJSON(w, code, e)
 	} else if err != nil {
 		he := HTTPError{
